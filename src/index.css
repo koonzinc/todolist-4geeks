@@ -74,4 +74,10 @@ code {
 }
 p {
   margin-top: 40px;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 5px;
+  width: fit-content;
+  color: black;
+  padding: 5px 10px;
 }

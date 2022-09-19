@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 
 
-const Todo = ({todos, completeTodo, removeTodo}) => {
+const Todo = ({todos, removeTodo}) => {
     const [edit, setEdit] = useState({
         id: null,
         value: ''
@@ -10,7 +10,7 @@ const Todo = ({todos, completeTodo, removeTodo}) => {
 
     return todos.map((todo, index) => (
         <div className='todo-row' key={index}>
-            <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+            <div key={todo.id}>
                 {todo.text}
             </div>
             <div className='icons'>

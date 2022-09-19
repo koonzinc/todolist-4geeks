@@ -21,22 +21,13 @@ const TodoList = () => {
         setTodos(removeArr)
     }
 
-    const completeTodo = (id) => {
-        let updatedTodos = todos.map(todo => {
-            if(todo.id === id) {
-                todo.isComplete = !todo.isComplete
-            }
-            return todo
-        })
-        setTodos(updatedTodos);
-    }
 
   return (
     <div className='todo-list-container'>
         <h1 className='todo-list-header'>What needs to get done?</h1>
         <TodoForm onSubmit={addTodo} />
-        <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} />
-        {todos.length === 0 ? <p>Add a todo</p> : <p>{todos.length} todos left</p>}
+        <Todo todos={todos} removeTodo={removeTodo} />
+        {todos.length === 0 ? <p>Add a task</p> : <p>{todos.length} tasks left</p>}
     </div>
   )
 }
