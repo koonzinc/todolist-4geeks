@@ -10,7 +10,7 @@ const Todo = ({todos, removeTodo}) => {
 
     return todos.map((todo, index) => (
         <div className='todo-row' key={index}>
-            <div key={todo.id}>
+            <div className='todo-text' key={todo.id}>
                 {todo.text}
             </div>
             <div className='icons'>
