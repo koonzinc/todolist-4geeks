@@ -27,7 +27,7 @@ const TodoList = () => {
         <h1 className='todo-list-header'>What needs to get done?</h1>
         <TodoForm onSubmit={addTodo} />
         <Todo todos={todos} removeTodo={removeTodo} />
-        {todos.length === 0 ? <p>Add a task</p> : <p>{todos.length} tasks left</p>}
+        {todos.length === 0 ? <p>No tasks, add a task</p> : <p>{todos.length} tasks left</p>}
     </div>
   )
 }
